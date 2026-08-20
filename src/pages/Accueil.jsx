@@ -1,23 +1,25 @@
 import { Link } from 'react-router'
+import imageFrigo from '../assets/frigo.png'
 
 export default function Accueil() {
 
     return(
-        <div>
-  <h1>Accueil</h1>
+        <div className="accueil">
 
-  <Link to="/ajouter">
-    Aller aux ingrédients
+  <h1>Frigo Vide</h1>
+
+  <img src={imageFrigo} alt="Frigo" />
+
+  <p className="presentation">
+  L'application qui vous aide à mieux manger
+  en utilisant vos restes et en gaspillant
+  le moins possible.
+  </p>
+
+  <Link className="bouton-accueil" to="/ajouter">
+    Y a quoi dans le frigo aujourd'hui ?
   </Link>
-   <Link to="/favoris">
-    Aller aux favoris
-   </Link>
-   <Link to="/recettes">
-    Aller aux recettes
-   </Link>
-   <Link to="/detailrecette">
-    Aller aux details d'une rectte
-   </Link>
+
 </div>
     )
 }
