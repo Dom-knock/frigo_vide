@@ -30,3 +30,98 @@ body {
   border: 2px solid black;
   box-shadow: 0 2px 0 black;
 }
+
+.ajouter {
+  max-width: 400px;
+  min-height: 100vh;
+  margin: auto;
+  background-color: #fff0e9;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ajouter {
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+.ajouter h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.ingredient-item {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ingredient-item {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: white;
+  padding: 5px 15px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+
+  box-sizing: border-box;
+}
+
+.ajout-formulaire {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.ingredient-input {
+  flex: 1;
+
+  padding: 12px 15px;
+  border: 2px solid black;
+  border-radius: 20px;
+
+  font-family: "Concert One", sans-serif;
+  font-size: 16px;
+
+  box-sizing: border-box;
+}
+
+.bouton-ajouter {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #ff5a00;
+  color: white;
+
+  border: 2px solid black;
+  border-radius: 50%;
+
+
+}
+
+.bouton-supprimer {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #ff5a00;
+  color: white;
+
+  border: 2px solid black;
+  border-radius: 50%;
+}
