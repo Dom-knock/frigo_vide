@@ -169,3 +169,43 @@ body {
   object-fit: cover;
   border-radius: 20px;
 }
+
+
+.favoris-page {
+  width: 90%;
+  max-width: 700px;
+  margin: auto;
+  padding: 30px;
+  background-color: #fff0e8;
+  box-sizing: border-box;
+}
+
+.favoris-page h1 {
+  text-align: center;
+}
+
+.favoris-liste {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.favori-card {
+  width: calc(50% - 8px);
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.favori-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.favori-card p {
+  padding: 10px;
+  margin: 0;
+}

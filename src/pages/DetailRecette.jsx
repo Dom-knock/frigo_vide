@@ -1,13 +1,17 @@
 import { useParams } from "react-router"
 import recettes from "../data/recettes_cuisine.json"
-
+import { useContext } from "react";
+import { FavorisContext } from "../context/FavorisContext";
+import { Link } from "react-router";
 
 
 export default function DetailRecette() {
     const { id } = useParams()
+    const { ajouterFavori } = useContext(FavorisContext);
     const recette = recettes.find(
         (recette) => recette.id === Number(id)
     )
+
     console.log(recette)
     return (
         <div className="detail-recette">
@@ -21,6 +25,8 @@ export default function DetailRecette() {
                 <p>Temps de préparation : {recette.temps_preparation}</p>
                 <p>Temps de cuisson : {recette.temps_cuisson}</p>
             </div>
+            <button onClick={() => ajouterFavori(recette)}> Ajouter aux favoris ❤️</button>
+            <Link to="/favoris">Voir mes favoris</Link>
 
             <div className="detail-bloc">
                 <h2>Ingrédients</h2>
