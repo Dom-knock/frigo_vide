@@ -14,7 +14,7 @@ function App() {
       <Route path="/ajouter" element={<Ajouter />} />
       <Route path="/favoris" element={<Favoris />} />
       <Route path="/recettes" element={<Recettes />} />
-      <Route path="/detailrecette" element={<DetailRecette />} />
+      <Route path="/detailrecette/:id" element={<DetailRecette />} />
     </Routes>
 
     </>

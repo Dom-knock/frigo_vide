@@ -1,10 +1,22 @@
+import { Link } from "react-router"
 import { useState } from "react"
 import { TrashIcon, PlusIcon } from "@phosphor-icons/react"
+import recettes from "../data/recettes_cuisine.json"
 
 export default function Ajouter() {
 
     const [ingredient, setIngredient] = useState("")
     const [ingredients, setIngredients] = useState([])
+
+    const recettesFiltrees = recettes.filter((recette) =>
+        ingredients.some((ingredientUtilisateur) =>
+            recette.ingredients.some((ingredientRecette) =>
+                ingredientRecette.nom === ingredientUtilisateur
+            )
+        )
+    )
+
+
 
     function ajouterIngredient() {
 
@@ -47,6 +59,20 @@ export default function Ajouter() {
             </div>
 
         ))}
+
+            <h2>Recettes trouvées</h2>
+
+            {recettesFiltrees.map((recette) => (
+                <Link
+                    to={`/detailrecette/${recette.id}`}
+                    key={recette.id}
+                >
+                    <div className="recette-card">
+                        <img src={recette.image} alt={recette.nom} />
+                        <p>{recette.nom}</p>
+                    </div>
+                </Link>
+            ))}
         </div>
     )
 
